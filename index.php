@@ -1,4 +1,4 @@
-<?php define('DarkCoreCMS', TRUE); include 'header.php'; if (isset($_SESSION['usr'])) { $user_prw = $_SESSION['usr'];}
+﻿<?php define('DarkCoreCMS', TRUE); include 'header.php'; if (isset($_SESSION['usr'])) { $user_prw = $_SESSION['usr'];}
     if (isset($_POST['login']))
         do_login($_POST['login_username'],$_POST['login_password']);
     if (isset($_GET["errlogin"])){?>
@@ -28,9 +28,8 @@
 						<div class='newsthumbresult'>&emsp;&emsp;<?php echo strip_tags(substr($data_news->last_topic_index['body'], 0, 300)); ?>...</div>
 						<div class='newsthumbbutton'>
 							<div class='thb-left'>
-								<label style='color:#72BF8B;'>By</label> <a href="../user.php?id=<?php echo $data_news->last_topic_index['autor']; ?>"><label style='font-size:14px !important;color:#<?php echo namecolor(get_rank_byid($data_news->last_topic_index['autor']),get_vip_byid($data_news->last_topic_index['autor'])); ?>;'><?php echo ucfirst(strtolower(get_username_byid($data_news->last_topic_index['autor']))); ?></label></a>
-								<label style='color:#72BF8B;'> in <?php echo substr($data_news->last_topic_index['date'],0,10); ?> </label>
-								<label style='color:#72BF8B;'>Comments to this post ( </label><label style='color:#42E2A8;'><?php echo total_comments($data_news->last_topic_index['id']); ?></label><label style='color:#72BF8B;'> ) </label>
+								<label style='color:#72BF8B;'>Опубликовал</label> <a href="../user.php?id=<?php echo $data_news->last_topic_index['autor']; ?>"><label style='font-size:14px !important;color:#<?php echo namecolor(get_rank_byid($data_news->last_topic_index['autor']),get_vip_byid($data_news->last_topic_index['autor'])); ?>;'><?php echo ucfirst(strtolower(get_username_byid($data_news->last_topic_index['autor']))); ?></label></a>
+								<label style='color:#72BF8B;'> <?php echo substr($data_news->last_topic_index['date'],0,10); ?> </label>
 							</div>
 
 						</div>
@@ -38,7 +37,7 @@
 				</div>
 			</div>
 			<div id='mediabox'>
-				<div class='mediabox-head-text'>MEDIA</div>
+				<div class='mediabox-head-text'>Видео</div>
                 <div class="newsdivider"></div>
                 <iframe id="abc_frame" width="368" height="215" src="https://www.youtube.com/embed/iyQ0dXWmW6o" frameborder="0" allowfullscreen></iframe>
                 <div class="media-line">
