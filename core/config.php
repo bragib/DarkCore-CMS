@@ -1,6 +1,6 @@
 <?php if(!defined('DarkCoreCMS')) { header('Location: ../');} 
 //Website informations
-$website_title = "DarkCorE CMS";
+$website_title = "Draenor.Info";
 $website_description = "DarKcorE CMS is an Open Source work in progress Content Management System for Trinitycore released for free for our lovely emulation communities.";
 $website_keywords = "Dark,core,darkcore,cms,trinitycore";
 
@@ -8,7 +8,7 @@ $website_keywords = "Dark,core,darkcore,cms,trinitycore";
 $limit=21; //Set how many results to show / page
 
 //Server Config
-$realmlist="cms.darkcore.com";
+$realmlist='SET portal "wod.draenor.info"';
 
 //$DB_HOST = '0';
 //$DB_USERNAME = '0';
